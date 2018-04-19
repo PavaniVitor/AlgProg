@@ -3,18 +3,17 @@
 
 void main ()
 {
-
-
     char resposta;
     char matriz [3][3];
     int jogando = 1;
     int jogador = 1; //jogador 1 -> player | jogador -> 2 player ou npc
     int contador = 0;
     int linha , coluna;
+    int i, j;
 
-    for (int i = 0 ; i < 3 ; i = i + 1)
+    for (i = 0 ; i < 3 ; i = i + 1)
     {
-        for (int j = 0 ; j < 3 ; j = j + 1)
+        for (j = 0 ; j < 3 ; j = j + 1)
         {
             matriz[i][j] = '.';
         }
@@ -24,11 +23,11 @@ void main ()
         {
             if (jogador == 1) // vez do jogador 1
             {
-                for (int m = 0 ; m < 3 ; m = m + 1) //printar tabuleiro na tela (inicio)
+                for (i = 0 ; i < 3 ; i = i + 1) //printar tabuleiro na tela (inicio)
                 {
-                    for (int n = 0 ; n < 3 ; n = n+ 1)
+                    for (j = 0 ; j < 3 ; j = j+ 1)
                     {
-                        printf ("%c" ,matriz[m][n]);
+                        printf ("%c" ,matriz[i][j]);
                     }
                     printf("\n");
                 } //printar tabuleiro na tela (fim)
@@ -61,11 +60,11 @@ void main ()
             }
             else // vez do jogador 2
             {
-                 for (int m = 0 ; m < 3 ; m = m + 1)
+                 for (i = 0 ; i < 3 ; i = i + 1)
                 {
-                    for (int n = 0 ; n < 3 ; n = n+ 1)
+                    for (j = 0 ; j < 3 ; j = j+ 1)
                     {
-                        printf ("%c" ,matriz[m][n]);
+                        printf ("%c" ,matriz[i][j]);
                     }
                     printf("\n");
                 }
@@ -94,7 +93,7 @@ void main ()
                     printf("Jogada invalida, escolha uma linha e uma coluna entre 1 e 3\n");
                 }
             }
-            for (int i = 0 ; i < 3 ; i = i + 1 ) //checar se venceu por colunas ou linhas:
+            for (i = 0 ; i < 3 ; i = i + 1 ) //checar se venceu por colunas ou linhas:
             {
                 if ((matriz[i][0] == matriz [i][1]) && (matriz[i][1] == matriz[i][2]) && (matriz[i][1] != '.'))
                 {
@@ -156,17 +155,12 @@ void main ()
                 printf("Acabaram as jogadas\n");
             }
         }
-    for (int m = 0 ; m < 3 ; m = m + 1) //printar tabuleiro na tela
+    for (i = 0 ; i < 3 ; i = i + 1) //printar tabuleiro na tela
     {
-        for (int n = 0 ; n < 3 ; n = n+ 1)
+        for (j = 0 ; j < 3 ; j = j + 1)
         {
-            printf ("%c" ,matriz[m][n]);
+            printf ("%c" ,matriz[i][j]);
         }
             printf("\n");
     }
 }
-
-
-
-
-
